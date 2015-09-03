@@ -1,0 +1,23 @@
+<div class="conversation-panel" layout="column">
+  <md-list flex>
+    <md-list-item ng-repeat="message in vm.messages">
+      <div>
+        <span ng-if="message.author === 'Computer'" layout="row" layout-align="start center">
+          {{ message.text }}
+        </span>
+        <span ng-if="message.author === 'User'" layout="row" layout-align="end center">
+          {{ message.text }}
+        </span>
+      </div>
+    </md-list-item>
+  </md-list>
+  <div class="user-input" layout="row">
+    <form ng-submit="vm.addUserMessage()" flex layout="row">
+      <md-input-container flex>
+        <label>Your input</label>
+        <input ng-model="vm.userInput" />
+      </md-input-container>
+      <md-button type="submit" class="md-raised md-primary">Send</md-button>
+    </form>
+  </div>
+</div>
