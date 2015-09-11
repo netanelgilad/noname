@@ -12,4 +12,5 @@ angular:angular-material
 netanelgilad:angular-app-logger
 dburles:collection-helpers
 netanelgilad:angular-server
-xolvio:cucumber
+sanjo:jasmine
+velocity:html-reporter
